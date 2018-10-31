@@ -1,0 +1,39 @@
+/*
+ * The square should stop rotating when middle button is pressed and start
+ * rotating again when left button is pressed
+ */
+
+#include <GL/glut.h>
+#include <math.h>
+
+GLfloat theta, thetar;
+void display()
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	glBegin(GL_POLYGON);
+	thetar = theta / (3.14159 / 180.0);       
+	glVertex2f(cos(thetar), sin(thetar));
+	glVertex2f(-sin(thetar), cos(thetar));
+	glVertex2f(-cos(thetar), -sin(thetar));
+	glVertex2f(sin(thetar), -cos(thetar));
+	glEnd();
+	glFlush();
+	glutSwapBuffers();
+}
+void idle()
+{
+	theta += 2;
+	if (theta >= 360.0) theta -= 360.0;
+	glutPostRedisplay();
+}
+
+int main(int argc, char **argv)
+{
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	glutCreateWindow("Rotating Square");
+	glutIdleFunc(idle);
+	glutDisplayFunc(display);
+	glutMainLoop();
+	return 0;
+}
