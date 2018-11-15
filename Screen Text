@@ -29,8 +29,8 @@ void renderbitmap(float x, float y, void *font, char *string) {
 }
 
 void introscreen() {
-	glColor3f(1.f, 1.f, 0.5);
-	
+	glColor3f(0.0f, 1.f, 0.0);
+
 	/*char buf[100] = { 0 };
 	sprintf_s(buf, "Color"); // <--- Muda o texto aqui
 	renderbitmap(0, 50, GLUT_BITMAP_TIMES_ROMAN_24, buf);
@@ -40,77 +40,71 @@ void introscreen() {
 	GLfloat xt = -1.6, yt = 1.25, zt = 0;
 	glLineWidth(10);
 	glBegin(GL_LINES);                  //Basic lines are used to display Doodle jump.
-		//display d
+	
+	//display c
 	glVertex3f(xt, yt, zt);
 	glVertex3f(xt + .4, yt, zt);
-
-	glVertex3f(xt + .4, yt, zt);
-	glVertex3f(xt + .4, yt - .7, zt);
 
 	glVertex3f(xt + .4, yt - .7, zt);
 	glVertex3f(xt, yt - .7, zt);
 
-	glVertex3f(xt + .1, yt, zt);
-	glVertex3f(xt + .1, yt - .7, zt);
+	glVertex3f(xt , yt, zt);
+	glVertex3f(xt , yt - .7, zt);
+
 	//display o
 	xt = xt + .5;
 	glVertex3f(xt, yt, zt);
-	glVertex3f(xt + .4, yt, zt);
+	glVertex3f(xt + .417, yt, zt);
 
 	glVertex3f(xt + .4, yt, zt);
 	glVertex3f(xt + .4, yt - .7, zt);
 
-	glVertex3f(xt + .4, yt - .7, zt);
+	glVertex3f(xt + .417, yt - .7, zt);
 	glVertex3f(xt, yt - .7, zt);
 
 	glVertex3f(xt, yt - .7, zt);
 	glVertex3f(xt, yt, zt);
-	//display o
-	xt = xt + .5;
-	glVertex3f(xt, yt, zt);
-	glVertex3f(xt + .4, yt, zt);
 
-	glVertex3f(xt + .4, yt, zt);
-	glVertex3f(xt + .4, yt - .7, zt);
-
-	glVertex3f(xt + .4, yt - .7, zt);
-	glVertex3f(xt, yt - .7, zt);
-
-	glVertex3f(xt, yt - .7, zt);
-	glVertex3f(xt, yt, zt);
-	//display d
-	xt = xt + .5;
-	glVertex3f(xt, yt, zt);
-	glVertex3f(xt + .4, yt, zt);
-
-	glVertex3f(xt + .4, yt, zt);
-	glVertex3f(xt + .4, yt - .7, zt);
-
-	glVertex3f(xt + .4, yt - .7, zt);
-	glVertex3f(xt, yt - .7, zt);
-
-	glVertex3f(xt + .1, yt, zt);
-	glVertex3f(xt + .1, yt - .7, zt);
 	//display l
 	xt = xt + .5;
 	glVertex3f(xt, yt, zt);
-	glVertex3f(xt, yt - .7, zt);
+	glVertex3f(xt, yt - .719, zt);
 
 	glVertex3f(xt, yt - .7, zt);
 	glVertex3f(xt + .4, yt - .7, zt);
-	//display e
+
+	//display o
 	xt = xt + .5;
 	glVertex3f(xt, yt, zt);
-	glVertex3f(xt, yt - .7, zt);
+	glVertex3f(xt + .417, yt, zt);
 
-	glVertex3f(xt, yt - .7, zt);
+	glVertex3f(xt + .4, yt, zt);
 	glVertex3f(xt + .4, yt - .7, zt);
 
+	glVertex3f(xt + .417, yt - .7, zt);
+	glVertex3f(xt, yt - .7, zt);
+
+	glVertex3f(xt, yt - .7, zt);
 	glVertex3f(xt, yt, zt);
-	glVertex3f(xt + .4, yt, zt);
+	
+	//display r
+	xt = xt + .5;
+	glVertex3f(xt, yt, zt);
+	glVertex3f(xt + .3, yt, zt);
+
+	glVertex3f(xt + .3, yt, zt);
+	glVertex3f(xt + .3, yt - .3, zt);
+
+	glVertex3f(xt + .3, yt - .3, zt);
+	glVertex3f(xt, yt - .3, zt);
+
+	glVertex3f(xt, yt, zt);
+	glVertex3f(xt, yt - .7, zt);
 
 	glVertex3f(xt, yt - .35, zt);
-	glVertex3f(xt + .3, yt - .35, zt);
+	glVertex3f(xt + .5, yt - .8, zt);
+	
+	
 	//display j
 	xt = -1.1;
 	yt = yt - 1;
@@ -125,6 +119,7 @@ void introscreen() {
 
 	glVertex3f(xt, yt - .7, zt);
 	glVertex3f(xt, yt - .5, zt);
+
 	//display u
 	xt = xt + .5;
 	glVertex3f(xt, yt, zt);
@@ -135,6 +130,7 @@ void introscreen() {
 
 	glVertex3f(xt + .4, yt - .7, zt);
 	glVertex3f(xt + .4, yt, zt);
+	
 	//display m
 	xt = xt + .5;
 	glVertex3f(xt, yt, zt);
@@ -148,6 +144,7 @@ void introscreen() {
 
 	glVertex3f(xt + .4, yt, zt);
 	glVertex3f(xt + .4, yt - .7, zt);
+	
 	//display p
 	xt = xt + .5;
 	glVertex3f(xt, yt, zt);
@@ -162,6 +159,14 @@ void introscreen() {
 	glVertex3f(xt, yt, zt);
 	glVertex3f(xt, yt - .7, zt);
 
+
+	//display l
+	xt = xt + .5;
+	glVertex3f(xt, yt, zt);
+	glVertex3f(xt, yt - .718, zt+ 2);
+
+	glVertex3f(xt, yt - .7, zt);
+	glVertex3f(xt + .4, yt - .7, zt);
 
 	glEnd();
 }
@@ -192,7 +197,6 @@ void reshape(GLsizei w, GLsizei h) {
 	// Set the clipping volume
 	glOrtho(-2.0, 2.0, -2.0, 2.0, -3.0, 3.0);
 
-
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
@@ -203,7 +207,7 @@ int main(int arg, char** argv)
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(800, 900);
 	glutInitWindowPosition(30, 30);
-	glutCreateWindow("Texto OpenGL");
+	glutCreateWindow("Color Switch");
 
 
 	glutDisplayFunc(display);
